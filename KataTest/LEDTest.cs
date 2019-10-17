@@ -12,7 +12,7 @@ namespace KataTest
         [TestMethod]
         public void ShowNumberOneLeds()
         {
-            string[] one = new string[] {  "   ", "  |", "  |" };
+            string[] one = new string[] { "   ", "  |", "  |" };
 
             CollectionAssert.AreEqual(one, led.NumberToLCD(1));
         }
@@ -32,5 +32,17 @@ namespace KataTest
 
             CollectionAssert.AreEqual(three, led.NumberToLCD(3));
         }
+
+        [TestMethod]
+        public void ShowNumberFiveWithFormat()
+        {
+            string five = " _ \n|_ \n _|";
+
+            string fiveResponse = LED.ToLCD(5);
+
+            Assert.AreEqual(five, fiveResponse);
+        }
+
+      
     }
 }

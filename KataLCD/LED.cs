@@ -9,13 +9,13 @@ namespace KataLCD
     public class LED
     {
         //Tipos de led
-        private static readonly string _NONE = "   ";
-        private static readonly string _LEFT = "  |";
-        private static readonly string _MIDL = " _ ";
-        private static readonly string _MDLT = " _|";
-        private static readonly string _MDRT = "|_ ";
-        private static readonly string _FULL = "|_|";
-        private static readonly string _BOTH = "| |";
+        public static readonly string _NONE = "   ";
+        public static readonly string _LEFT = "  |";
+        public static readonly string _MIDL = " _ ";
+        public static readonly string _MDLT = " _|";
+        public static readonly string _MDRT = "|_ ";
+        public static readonly string _FULL = "|_|";
+        public static readonly string _BOTH = "| |";
 
         private static readonly Dictionary<char, string[]> Digitos = new Dictionary<char, string[]>
         {
@@ -58,6 +58,15 @@ namespace KataLCD
             var n = Convert.ToChar(number.ToString());
 
             return Digitos[n];
+        }
+
+        public static string ToLCD(int number)
+        {
+            var n = Convert.ToChar(number.ToString());
+
+            string result = string.Join("\n", Digitos[n]);
+
+            return result;
         }
     }
 }
