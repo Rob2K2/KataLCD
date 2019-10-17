@@ -10,7 +10,7 @@ namespace KataLCD
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(LED.ToLCD(0));
+            Console.WriteLine(LED.ToLCD(9));
         }
     }
 }

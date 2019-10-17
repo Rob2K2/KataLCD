@@ -46,11 +46,31 @@ namespace KataTest
         [TestMethod]
         public void ShowNumberZeroWithFormat()
         {
-            string five = LED._MIDL + '\n' + LED._BOTH + '\n' + LED._FULL;
+            string zero = LED._MIDL + '\n' + LED._BOTH + '\n' + LED._FULL;
 
-            string fiveResponse = LED.ToLCD(0);
+            string zeroResponse = LED.ToLCD(0);
 
-            Assert.AreEqual(five, fiveResponse);
+            Assert.AreEqual(zero, zeroResponse);
+        }
+
+        [TestMethod]
+        public void ShowNumberEightWithFormat()
+        {
+            string eight = LED._MIDL + '\n' + LED._FULL + '\n' + LED._FULL;
+
+            string eightResponse = LED.ToLCD(8);
+
+            Assert.AreEqual(eight, eightResponse);
+        }
+
+        [TestMethod]
+        public void ShowNumberNineWithFormat()
+        {
+            string nine = LED._MIDL + '\n' + LED._FULL + '\n' + LED._MDLT;
+
+            string nineResponse = LED.ToLCD(9);
+
+            Assert.AreEqual(nine, nineResponse);
         }
     }
 }

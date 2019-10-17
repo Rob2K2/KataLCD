@@ -27,8 +27,8 @@ namespace KataLCD
             {'5', new string[] { _MIDL, _MDRT, _MDLT }},
             {'6', new string[] { _MIDL, _MDRT, _FULL }},
             {'7', new string[] { _MIDL, _LEFT, _LEFT }},
-            {'8', new string[] { _MIDL, _FULL, _MDLT }},
-            {'9', new string[] { _MIDL, _BOTH, _FULL }}
+            {'8', new string[] { _MIDL, _FULL, _FULL }},
+            {'9', new string[] { _MIDL, _FULL, _MDLT }}
         };
 
 
